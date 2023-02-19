@@ -52,7 +52,8 @@ redirector@redirector:~$ sudo vim /etc/ssl/private/private.key
 redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 ```
 
-6. 
+6. Head to `https://192.168.231.129` and inspect SSL certificate.
+![](./assets/ssl_cert.png)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
