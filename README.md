@@ -2,6 +2,44 @@
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
 ## Chapter 1: Intro to C2
+### Redirector
+1. SSH into Redirector with user `redirector` and password `havoc`.
+```
+┌──(kali💀JesusCries)-[~/Desktop]
+└─$ ssh redirector@192.168.231.129
+redirector@192.168.231.129's password: havoc
+```
+
+2. Initiate Apache service.
+```
+redirector@redirector:~$ sudo systemctl restart apache2
+[sudo] password for redirector: havoc
+```
+
+3. Generate SSL keypair.
+```
+┌──(kali💀JesusCries)-[~/Desktop]
+└─$ openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out public.crt -keyout private.key
+Generating a RSA private key
+.........................................................................................................................................................................................................................................................................................................................................................++++
+....................++++
+writing new private key to 'private.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:MY
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:KL
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Asia Pacific University
+Organizational Unit Name (eg, section) []:APU
+Common Name (e.g. server FQDN or YOUR name) []:apu.edu.my
+Email Address []:
+```
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
