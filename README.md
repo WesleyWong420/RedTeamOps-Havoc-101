@@ -10,7 +10,7 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 redirector@192.168.231.129's password: havoc
 ```
 
-2. Initiate Apache service.
+2. Initialize Apache service.
 ```
 redirector@redirector:~$ sudo systemctl restart apache2
 [sudo] password for redirector: havoc
@@ -39,6 +39,17 @@ Organization Name (eg, company) [Internet Widgits Pty Ltd]:Asia Pacific Universi
 Organizational Unit Name (eg, section) []:APU
 Common Name (e.g. server FQDN or YOUR name) []:apu.edu.my
 Email Address []:
+```
+
+4. Copy and paste `private.key`.
+```
+redirector@redirector:~$ sudo vim /etc/ssl/private/private.key
+```
+> Use `:wq` to save and quit; `qa!` to cancel save
+
+5. Copy and paste `public.crt`.
+```
+redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 ```
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
