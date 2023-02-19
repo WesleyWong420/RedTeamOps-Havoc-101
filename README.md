@@ -67,9 +67,11 @@ Your identification has been saved in /home/redirector/.ssh/id_rsa
 Your public key has been saved in /home/redirector/.ssh/id_rsa.pub
 ```
 
+> Copy `/home/redirector/.ssh/id_rsa.pub` to `redirector` (identity file) in Attacker Linux
+
 8. On Attacker Linux VM, setup a SSH tunnel to Redirector.
 ```
-──(kali💀JesusCries)-[~/Desktop]
+┌──(kali💀JesusCries)-[~/Desktop]
 └─$ ssh -N -R 8443:localhost:443 -i redirector redirector@192.168.231.129
 ```
 
