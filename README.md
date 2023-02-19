@@ -3,20 +3,20 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 ## Chapter 1: Intro to C2
 ### Redirector
-1. SSH into Redirector with user `redirector` and password `havoc`.
+1. SSH into Redirector with user `redirector` and password `havoc`
 ```
 ┌──(kali💀JesusCries)-[~/Desktop]
 └─$ ssh redirector@192.168.231.129
 redirector@192.168.231.129's password: havoc
 ```
 
-2. Initialize Apache service.
+2. Initialize Apache service
 ```
 redirector@redirector:~$ sudo systemctl restart apache2
 [sudo] password for redirector: havoc
 ```
 
-3. Generate SSL keypair.
+3. Generate SSL keypair
 ```
 ┌──(kali💀JesusCries)-[~/Desktop]
 └─$ openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out public.crt -keyout private.key
@@ -45,12 +45,14 @@ Email Address []:
 ```
 redirector@redirector:~$ sudo vim /etc/ssl/private/private.key
 ```
-> Use `:wq` to save and quit; `qa!` to cancel save
+> Use `:wq` to save and quit; `:qa` to cancel save and quit in Vim
 
 5. Copy and paste `public.crt`.
 ```
 redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 ```
+
+6. 
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
