@@ -21,7 +21,7 @@ redirector@redirector:~$ sudo systemctl restart apache2
 ┌──(kali💀JesusCries)-[~/Desktop]
 └─$ openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out public.crt -keyout private.key
 Generating a RSA private key
-.........................................................................................................................................................................................................................................................................................................................................................++++
+................................................++++
 ....................++++
 writing new private key to 'private.key'
 -----
@@ -53,6 +53,7 @@ redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 ```
 
 6. Head to `https://192.168.231.129` and inspect SSL certificate.
+
 ![](./assets/ssl_cert.png)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
