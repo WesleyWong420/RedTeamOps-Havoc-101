@@ -2,7 +2,7 @@
 
 1. Setup file hosting service on Attacker Linux.
 ```
-┌──(kali💀JesusCries)-[~/Desktop]
+┌──(havoc@havoc):~/Desktop
 └─$ updog --ssl
 [+] Serving /home/kali/Desktop...
  * Running on all addresses.
@@ -12,7 +12,7 @@
 
 2. On Attacker Linux VM, setup a SSH tunnel for Payload Stager.
 ```
-┌──(kali💀JesusCries)-[~/Desktop]
+┌──(havoc@havoc):~/Desktop
 └─$ ssh -N -R 9090:localhost:9090 -i redirector redirector@192.168.231.129
 ```
 
