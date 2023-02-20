@@ -8,9 +8,9 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 | Attacker Linux      | havoc         | havoc        | 4 GB    | 20 GB       | Semi-Mandatory |
 | Attacker Windows    | Havoc         | havoc        | 4 GB    | 15 GB       | Mandatory      |
 | Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       |
-| Domain Controller   | -             | -            | 2 GB    | 25 GB       | Mandatory      |
-| Workstation 1       | -             | -            | 1 GB    | 25 GB       | Mandatory      |
-| Workstation 2       | -             | -            | 1 GB`   | 25 GB       | Mandatory      |
+| Domain Controller   | -             | -            | 2 GB    | 15 GB       | Mandatory      |
+| Workstation 1       | -             | -            | 1 GB    | 15 GB       | Mandatory      |
+| Workstation 2       | -             | -            | 1 GB`   | 15 GB       | Mandatory      |
 
 ## Chapter 1: Intro to C2
 
