@@ -83,7 +83,7 @@ State           Recv-Q          Send-Q                     Local Address:Port   
 LISTEN          0               128                            127.0.0.1:8443                          0.0.0.0:*              users:(("sshd",pid=1769,fd=9))           
 ```
 
-10. Customize `.htaccess` file under `/var/www/html` and restart Apache service.
+10. Customize `.htaccess` file under `/var/www/html`.
 ```
 redirector@redirector:~$ sudo vim /var/www/html/.htaccess
 ```
@@ -97,8 +97,9 @@ RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
 RewriteRule ^.*$ "https://www.google.com" [L,R=302]
 ```
 
+11. Restart Apache service.
 ```
 redirector@redirector:~$ sudo systemctl restart apache2
 ```
 
-11. Revisiting `https://192.168.231.129` will redirect you to google.com.
+12. Revisiting `https://192.168.231.129` will redirect you to `google.com`.
