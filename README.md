@@ -5,8 +5,9 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 ![](./assets/c2_infrastructure.png)
 
-[[Redirector]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Redirector.MD)
-[[Stager]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Stager.MD)
+#### [[Redirector]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Redirector.MD)
+
+#### [[Stager]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Stager.MD)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
