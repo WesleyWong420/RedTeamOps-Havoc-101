@@ -1,6 +1,16 @@
 # Red Team Ops: Havoc 101
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
+## Lab Setup
+| **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       |
+|---------------------|---------------|--------------|-----------------------|----------------|
+| Attacker Linux      | havoc         | havoc        | 4 GB    | 15 GB       | Semi-Mandatory |
+| Attacker Windows    | Havoc         | havoc        |         |             | Mandatory      |
+| Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       |
+| Domain Controller   | -             | -            | 2 GB    | 25 GB       | Mandatory      |
+| Workstation 1       | -             | -            | 1 GB    | 25 GB       | Mandatory      |
+| Workstation 2       | -             | -            | 1 GB`   | 25 GB       | Mandatory      |
+
 ## Chapter 1: Intro to C2
 
 ![](./assets/c2_infrastructure.png)
