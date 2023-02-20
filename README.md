@@ -2,8 +2,9 @@
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
 ## Lab Setup
+
 | **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       |
-|---------------------|---------------|--------------|-----------------------|----------------|
+|---------------------|---------------|--------------|---------|-------------|----------------|
 | Attacker Linux      | havoc         | havoc        | 4 GB    | 15 GB       | Semi-Mandatory |
 | Attacker Windows    | Havoc         | havoc        |         |             | Mandatory      |
 | Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       |
