@@ -91,10 +91,6 @@ redirector@redirector:~$ sudo vim /var/www/html/.htaccess
 ```
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} "demon.exe" [NC,OR]
-RewriteCond %{REQUEST_URI} "demon.bin" [NC]
-RewriteRule ^.*$ "https://localhost:9090%{REQUEST_URI}" [P]
-
 RewriteCond %{HTTP_USER_AGENT} "DuckDuckGo" [NC]
 RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
 
