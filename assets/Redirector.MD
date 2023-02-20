@@ -2,7 +2,7 @@
 
 1. SSH into Redirector with user `redirector` and password `havoc`.
 ```
-┌──(kali💀JesusCries)-[~/Desktop]
+┌──(havoc@havoc):~/Desktop
 └─$ ssh redirector@192.168.231.129
 redirector@192.168.231.129's password: havoc
 ```
@@ -15,7 +15,7 @@ redirector@redirector:~$ sudo systemctl restart apache2
 
 3. Generate SSL keypair on Attacker Linux.
 ```
-┌──(kali💀JesusCries)-[~/Desktop]
+┌──(havoc@havoc):~/Desktop
 └─$ openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out public.crt -keyout private.key
 Generating a RSA private key
 ................................................++++
@@ -72,7 +72,7 @@ Your public key has been saved in /home/redirector/.ssh/id_rsa.pub
 
 9. On Attacker Linux VM, setup a SSH tunnel to Redirector.
 ```
-┌──(kali💀JesusCries)-[~/Desktop]
+┌──(havoc@havoc):~/Desktop
 └─$ ssh -N -R 8443:localhost:443 -i redirector redirector@192.168.231.129
 ```
 
