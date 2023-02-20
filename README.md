@@ -2,11 +2,9 @@
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
 ## Chapter 1: Intro to C2
-### Redirector
+### Redirector [Tutorial](./assets/Redirector.md)
 
 ![](./assets/c2_infrastructure.png)
-
-[Tutorial](./assets/Redirector.md)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
