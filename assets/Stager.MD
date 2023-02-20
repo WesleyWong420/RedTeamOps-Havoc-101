@@ -22,3 +22,8 @@ RewriteCond %{REQUEST_URI} "demon.exe" [NC,OR]
 RewriteCond %{REQUEST_URI} "demon.bin" [NC]
 RewriteRule ^.*$ "https://localhost:9090%{REQUEST_URI}" [P]
 ```
+
+4. Restart Apache service.
+```
+redirector@redirector:~$ sudo systemctl restart apache2
+```
