@@ -2,11 +2,11 @@
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
 ## Chapter 1: Intro to C2
-### Redirector [[Tutorial]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Redirector.MD)
 
 ![](./assets/c2_infrastructure.png)
 
-### Stager [[Tutorial]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Stager.MD)
+[[Redirector]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Redirector.MD)
+[[Stager]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Stager.MD)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
 ### Runner
