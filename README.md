@@ -3,7 +3,9 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 ## Chapter 1: Intro to C2
 ### Redirector
+
 ![](./assets/c2_infrastructure.png)
+
 [Tutorial](./assets/Redirector.md)
 
 ## Chapter 2: OPSEC & AV/EDR Evasion
