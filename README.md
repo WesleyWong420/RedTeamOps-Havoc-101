@@ -89,7 +89,9 @@ LISTEN          0               128                            127.0.0.1:8443   
 10. Customize `.htaccess` file under `/var/www/html` and restart Apache service.
 ```
 redirector@redirector:~$ sudo vim /var/www/html/.htaccess
+```
 
+```
 RewriteEngine on
 
 RewriteCond %{REQUEST_URI} "demon.exe" [NC,OR]
@@ -100,7 +102,9 @@ RewriteCond %{HTTP_USER_AGENT} "DuckDuckGo" [NC]
 RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
 
 RewriteRule ^.*$ "https://www.google.com" [L,R=302]
+```
 
+```
 redirector@redirector:~$ sudo systemctl restart apache2
 ```
 
