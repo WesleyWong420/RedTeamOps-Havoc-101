@@ -3,23 +3,14 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 ## Lab Setup
 
-| **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       |
-|---------------------|:-------------:|:------------:|:-------:|:-----------:|:--------------:|
-| Attacker Linux      | havoc         | havoc        | 4 GB    | 20 GB       | Semi-Mandatory |
-| Attacker Windows    | Havoc         | havoc        | 4 GB    | 15 GB       | Mandatory      |
-| Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       |
-| Domain Controller   | -             | -            | 2 GB    | 15 GB       | Mandatory      |
-| Workstation 1       | -             | -            | 1 GB    | 15 GB       | Mandatory      |
-| Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      |
-
-| **Virtual Machine** | **RAM** | **Storage** | **Note**       | **Used In (Chapter)** | **Download Link** |
-|---------------------|:-------:|:-----------:|:--------------:|:---------------------:|:--------:|
-| Attacker Linux      | 4 GB    | 20 GB       | Semi-Mandatory | 1, 2, 3               | -        |
-| Attacker Windows    | 4 GB    | 15 GB       | Mandatory      | 1, 2                  | -        |
-| Redirector          | 1 GB    | 5 GB        | Optional       | 1, 2                  | -        |
-| Domain Controller   | 2 GB    | 15 GB       | Mandatory      | 3                     | -        |
-| Workstation 1       | 1 GB    | 15 GB       | Mandatory      | 3                     | -        |
-| Workstation 2       | 1 GB    | 15 GB       | Mandatory      | 3                     | -        |
+| **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       | **Used In (Chapter)** | **Download Link** |
+|---------------------|:-------------:|:------------:|:-------:|:-----------:|:--------------:|:---------------------:|:-----------------:|
+| Attacker Linux      | havoc         | havoc        | 4 GB    | 20 GB       | Semi-Mandatory | 1, 2, 3               | -                 |
+| Attacker Windows    | Havoc         | havoc        | 4 GB    | 15 GB       | Mandatory      | 1, 2                  | -                 |
+| Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       | 1, 2                  | -                 |
+| Domain Controller   | -             | -            | 2 GB    | 15 GB       | Mandatory      | 3                     | -                 |
+| Workstation 1       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
+| Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
 
 ## Chapter 1: Intro to C2
 
