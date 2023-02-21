@@ -1,6 +1,24 @@
 # Red Team Ops: Havoc 101
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
+## Agenda
+### **Chapter 1: Intro to C2**
+1. Basic Functionalities of Havoc
+2. Malleable C2 Profile
+3. C2 Infrastructure Design
+
+### **Chapter 2: OPSEC & Evasion**
+1. Built-In Evasion Mechanism of Havoc
+2. AV Evasion (Custom Injector)
+3. EDR Bypass
+4. Post-Exploitation Defense Evasion
+
+### **Chapter 3: Active Directory**
+1. Local Privilege Escalation
+2. Kerberos Attacks
+3. Lateral Movement
+4. Pivoting
+
 ## Lab Setup
 
 | **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       | **Used In (Chapter)** | **Download Link** |
