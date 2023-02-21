@@ -31,12 +31,12 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 | Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
 
 ## Chapter 1: Intro to C2
-
+### C2 Infrastructure Design
 ![](./assets/c2_infrastructure.png)
 
 #### [[Redirector]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Redirector.MD) [[Stager]](https://github.com/WesleyWong420/RedTeamOps-Havoc-101/blob/main/assets/Stager.MD)
 
-## Chapter 2: OPSEC & AV/EDR Evasion
+## Chapter 2: OPSEC & Evasion
 ### Runner
 Runner is the 1st out of 5 Proof-of-Concept Process Injectors that takes an arbitrary shellcode from a remote URL and perform shellcode injection on a sacrificial process `notepad.exe` using Win32 API calls. It also supports Parent Process ID (PPID) Spoofing, allowing the sacrificial process to spawn under an arbitrary process using it's PID. If the target `-t, --target` is not specified, it will perform self-injection instead.
 
