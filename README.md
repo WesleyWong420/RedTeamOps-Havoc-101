@@ -4,7 +4,7 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 ## Lab Setup
 
 | **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       |
-|---------------------|---------------|--------------|---------|-------------|----------------|
+|---------------------|:-------------:|:------------:|:-------:|:-----------:|:--------------:|
 | Attacker Linux      | havoc         | havoc        | 4 GB    | 20 GB       | Semi-Mandatory |
 | Attacker Windows    | Havoc         | havoc        | 4 GB    | 15 GB       | Mandatory      |
 | Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       |
@@ -13,7 +13,7 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 | Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      |
 
 | **Virtual Machine** | **RAM** | **Storage** | **Note**       | **Link** |
-|---------------------|---------|-------------|----------------|----------|
+|---------------------|:-------:|:-----------:|:--------------:|:--------:|
 | Attacker Linux      | 4 GB    | 20 GB       | Semi-Mandatory | -        |
 | Attacker Windows    | 4 GB    | 15 GB       | Mandatory      | -        |
 | Redirector          | 1 GB    | 5 GB        | Optional       | -        |
