@@ -91,7 +91,7 @@ redirector@redirector:~$ sudo vim /var/www/html/.htaccess
 ```
 RewriteEngine on
 
-RewriteCond %{HTTP_USER_AGENT} "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)" [NC]
+RewriteCond %{HTTP_USER_AGENT} "Slack/415620 CFNetwork/1240.0.4 Darwin/20.5.0" [NC]
 RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
 
 RewriteRule ^.*$ "https://www.slack.com" [L,R=302]
