@@ -1,0 +1,8 @@
+C:\Users\Wesley\source\repos\SylantStrike\x64\Debug\SylantStrikeInject.exe.config
+C:\Users\Wesley\source\repos\SylantStrike\x64\Debug\SylantStrikeInject.exe
+C:\Users\Wesley\source\repos\SylantStrike\x64\Debug\SylantStrikeInject.pdb
+C:\Users\Wesley\source\repos\SylantStrike\SylantStrikeInject\obj\Debug\SylantStrikeInject.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\SylantStrike\SylantStrikeInject\obj\Debug\SylantStrikeInject.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\SylantStrike\SylantStrikeInject\obj\Debug\SylantStrikeInject.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\SylantStrike\SylantStrikeInject\obj\Debug\SylantStrikeInject.exe
+C:\Users\Wesley\source\repos\SylantStrike\SylantStrikeInject\obj\Debug\SylantStrikeInject.pdb

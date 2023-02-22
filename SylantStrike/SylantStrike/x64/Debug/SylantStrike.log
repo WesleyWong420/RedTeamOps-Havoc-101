@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  SylantStrike.cpp
+  dllmain.cpp
+  Generating Code...
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  Generating Code...
+  SylantStrike.vcxproj -> C:\Users\Wesley\source\repos\SylantStrike\x64\Debug\SylantStrike.dll

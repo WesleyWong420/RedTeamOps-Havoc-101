@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  SylantStrike.cpp
+  dllmain.cpp
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 34 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  SylantStrike.vcxproj -> C:\Users\Wesley\source\repos\SylantStrike\x64\Release\SylantStrike.dll

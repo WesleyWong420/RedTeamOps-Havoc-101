@@ -1,0 +1,2 @@
+#define CYLANTSTRIKE_API __declspec(dllexport)
+#define CYLANTSTRIKE_API __declspec(dllimport)
