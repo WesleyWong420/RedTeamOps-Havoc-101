@@ -1,0 +1,10 @@
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\bin\Release\ServiceExec.exe.config
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\bin\Release\ServiceExec.exe
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\bin\Release\ServiceExec.pdb
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.ProjectInstaller.resources
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.csproj.GenerateResource.cache
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.exe
+C:\Users\Wesley\source\repos\ServiceExec\ServiceExec\obj\Release\ServiceExec.pdb
