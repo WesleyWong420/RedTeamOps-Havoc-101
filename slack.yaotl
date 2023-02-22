@@ -39,7 +39,7 @@ Listeners {
         HostRotation = "round-robin"
         Port         = 80
         Secure       = false
-        UserAgent    = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)"
+        UserAgent    = "Slack/415620 CFNetwork/1240.0.4 Darwin/20.5.0"
 
         Headers = [
             "Host: msdevchat.slack.com",
@@ -58,7 +58,7 @@ Listeners {
         HostRotation = "round-robin"
         Port         = 443
         Secure       = true
-        UserAgent    = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)"
+        UserAgent    = "Slack/415620 CFNetwork/1240.0.4 Darwin/20.5.0"
 
         Headers = [
             "Host: msdevchat.slack.com",
