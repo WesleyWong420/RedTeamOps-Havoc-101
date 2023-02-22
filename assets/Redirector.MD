@@ -91,10 +91,10 @@ redirector@redirector:~$ sudo vim /var/www/html/.htaccess
 ```
 RewriteEngine on
 
-RewriteCond %{HTTP_USER_AGENT} "DuckDuckGo" [NC]
+RewriteCond %{HTTP_USER_AGENT} "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)" [NC]
 RewriteRule ^.*$ "https://localhost:8443%{REQUEST_URI}" [P]
 
-RewriteRule ^.*$ "https://www.google.com" [L,R=302]
+RewriteRule ^.*$ "https://www.slack.com" [L,R=302]
 ```
 
 11. Restart Apache service.
@@ -102,4 +102,4 @@ RewriteRule ^.*$ "https://www.google.com" [L,R=302]
 redirector@redirector:~$ sudo systemctl restart apache2
 ```
 
-12. Revisiting `https://192.168.231.129` will redirect you to `google.com`.
+12. Revisiting `https://192.168.231.129` will redirect you to `slack.com`.
