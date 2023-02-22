@@ -1,0 +1,8 @@
+C:\Users\Wesley\source\repos\Bloater\Bloater\bin\Release\Bloater.exe.config
+C:\Users\Wesley\source\repos\Bloater\Bloater\bin\Release\Bloater.exe
+C:\Users\Wesley\source\repos\Bloater\Bloater\bin\Release\Bloater.pdb
+C:\Users\Wesley\source\repos\Bloater\Bloater\obj\Release\Bloater.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\Bloater\Bloater\obj\Release\Bloater.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\Bloater\Bloater\obj\Release\Bloater.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\Bloater\Bloater\obj\Release\Bloater.exe
+C:\Users\Wesley\source\repos\Bloater\Bloater\obj\Release\Bloater.pdb
