@@ -55,7 +55,7 @@ redirector@redirector:~$ sudo vim /etc/ssl/certs/public.crt
 
 7. Create HTTPS Listener for Traffic Redirection.
 
-![](./redirector_listener.PNG)
+![](./redirector_listener.png)
 
 8. Generate SSH keypair for SSH tunneling.
 ```
