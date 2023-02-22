@@ -1,0 +1,8 @@
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.exe.config
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.exe
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.pdb
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.exe
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.pdb
