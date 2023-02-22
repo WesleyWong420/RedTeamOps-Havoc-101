@@ -277,6 +277,15 @@ Process Injector 2: Clicker (Nt*API)
 [>] Clicker.exe removed from disk!
 ```
 
+### SylantStrike
+```
+PS C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release> .\SylantStrikeInject.exe --process=Clicker.exe --dll=C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
+Waiting for process events
++ Listening for the following processes: clicker.exe
+
+ Injecting process Clicker.exe(4312) with DLL C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
+```
+
 ### Bloater
 Bloater is a wrapper used to side-load `Clicker` for demonstrating Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
 ```
