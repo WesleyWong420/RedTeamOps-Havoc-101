@@ -278,6 +278,7 @@ Process Injector 2: Clicker (Nt*API)
 ```
 
 ### SylantStrike
+Home-made Endpoint Detection & Response (EDR) to hook NT*API calls. The hooking logic is not implemented perfectly and has a high chance of false positive. Use only for demonstrating EDR bypass.
 ```
 PS C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release> .\SylantStrikeInject.exe --process=Clicker.exe --dll=C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
 Waiting for process events
