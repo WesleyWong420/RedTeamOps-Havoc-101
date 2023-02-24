@@ -23,12 +23,12 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 
 | **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       | **Used In (Chapter)** | **Download Link** |
 |---------------------|:-------------:|:------------:|:-------:|:-----------:|:--------------:|:---------------------:|:-----------------:|
-| Attacker Linux      | havoc         | havoc        | 4 GB    | 18 GB       | Semi-Mandatory | 1, 2, 3               | -                 |
-| Attacker Windows    | Havoc         | havoc        | 4 GB    | 25 GB       | Mandatory      | 1, 2                  | -                 |
-| Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       | 1, 2                  | -                 |
-| Domain Controller   | -             | -            | 2 GB    | 15 GB       | Mandatory      | 3                     | -                 |
-| Workstation 1       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
-| Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | -                 |
+| Attacker Linux      | havoc         | havoc        | 4 GB    | 18 GB       | Semi-Mandatory | 1, 2, 3               | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059618_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FAttacker%20Linux%2Ezip&parent=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments&ct=1677226062195&or=Teams%2DHL&ga=1)                 |
+| Attacker Windows    | Havoc         | havoc        | 4 GB    | 25 GB       | Mandatory      | 1, 2                  | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059618_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FAttacker%20Windows%2Ezip&parent=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments&ct=1677226063637&or=Teams%2DHL&ga=1)                 |
+| Redirector          | redirector    | havoc        | 1 GB    | 5 GB        | Optional       | 1, 2                  | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059618_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FRedirector%2Ezip&parent=%2Fpersonal%2Ftp059618%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments&ct=1677226064342&or=Teams%2DHL&ga=1)                 |
+| Domain Controller   | -             | -            | 2 GB    | 15 GB       | Mandatory      | 3                     | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059494_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059494%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FHavocWorkshop&ct=1677226065046&or=Teams%2DHL&ga=1)                 |
+| Workstation 1       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059494_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059494%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FHavocWorkshop&ct=1677226065046&or=Teams%2DHL&ga=1)                 |
+| Workstation 2       | -             | -            | 1 GB    | 15 GB       | Mandatory      | 3                     | [OneDrive](https://cloudmails-my.sharepoint.com/personal/tp059494_mail_apu_edu_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftp059494%5Fmail%5Fapu%5Fedu%5Fmy%2FDocuments%2FHavocWorkshop&ct=1677226065046&or=Teams%2DHL&ga=1)                 |
 
 ## Chapter 1: Intro to C2
 ### C2 Malleable Profile
