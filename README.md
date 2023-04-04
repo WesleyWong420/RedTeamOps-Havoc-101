@@ -1,4 +1,5 @@
 # Red Team Ops: Havoc 101
+![](./assets/poster.png)
 Learn how to compromise an Active Directory Infrastructure by simulating adversarial Tactics, Techniques and Procedures (TTPs) using Havoc Framework. 
 
 ## Agenda
