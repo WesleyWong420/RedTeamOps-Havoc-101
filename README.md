@@ -20,6 +20,8 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 3. Lateral Movement
 4. Pivoting
 
+> [Blogpost](https://pikaroot.github.io/blogs/2023-02-25-HAVOC_Framework) by pikaroot
+
 ## Lab Setup
 
 | **Virtual Machine** | **Username**  | **Password** | **RAM** | **Storage** | **Note**       | **Used In (Chapter)** | **Download Link** |
