@@ -15,12 +15,11 @@ Learn how to compromise an Active Directory Infrastructure by simulating adversa
 4. Post-Exploitation Defense Evasion
 
 ### **Chapter 3: Active Directory**
+> [Blogpost](https://pikaroot.github.io/blogs/2023-02-25-HAVOC_Framework) by [@pikaroot](https://github.com/pikaroot)
 1. Local Privilege Escalation
 2. Kerberos Attacks
 3. Lateral Movement
 4. Pivoting
-
-> [Blogpost](https://pikaroot.github.io/blogs/2023-02-25-HAVOC_Framework) by pikaroot
 
 ## Lab Setup
 
