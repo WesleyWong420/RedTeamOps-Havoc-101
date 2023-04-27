@@ -1,0 +1,16 @@
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.exe.config
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.exe
+C:\Users\Wesley\source\repos\Clicker\Clicker\bin\Release\Clicker.pdb
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Stalker.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Stalker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Stalker.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.exe
+C:\Users\Wesley\source\repos\Clicker\Clicker\obj\Release\Clicker.pdb
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Release\Stalker.exe.config
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Release\Stalker.exe
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Release\Stalker.pdb
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Release\Stalker.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Release\Stalker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Release\Stalker.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Release\Stalker.exe
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Release\Stalker.pdb

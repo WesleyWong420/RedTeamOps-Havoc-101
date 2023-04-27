@@ -1,0 +1,8 @@
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Debug\Stalker.exe.config
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Debug\Stalker.exe
+C:\Users\Wesley\source\repos\Stalker\Stalker\bin\Debug\Stalker.pdb
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Debug\Stalker.csproj.AssemblyReference.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Debug\Stalker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Debug\Stalker.csproj.CoreCompileInputs.cache
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Debug\Stalker.exe
+C:\Users\Wesley\source\repos\Stalker\Stalker\obj\Debug\Stalker.pdb
