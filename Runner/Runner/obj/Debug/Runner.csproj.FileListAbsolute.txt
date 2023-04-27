@@ -1,8 +1,0 @@
-C:\Users\Wesley\source\repos\Runner\Runner\obj\Debug\Runner.csproj.AssemblyReference.cache
-C:\Users\Wesley\source\repos\Runner\Runner\obj\Debug\Runner.csproj.SuggestedBindingRedirects.cache
-C:\Users\Wesley\source\repos\Runner\Runner\obj\Debug\Runner.csproj.CoreCompileInputs.cache
-C:\Users\Wesley\source\repos\Runner\Runner\bin\Debug\Runner.exe.config
-C:\Users\Wesley\source\repos\Runner\Runner\bin\Debug\Runner.exe
-C:\Users\Wesley\source\repos\Runner\Runner\bin\Debug\Runner.pdb
-C:\Users\Wesley\source\repos\Runner\Runner\obj\Debug\Runner.exe
-C:\Users\Wesley\source\repos\Runner\Runner\obj\Debug\Runner.pdb
