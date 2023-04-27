@@ -1,8 +1,0 @@
-C:\Users\Wesley\source\repos\RatKing\RatKing\bin\Debug\RatKing.exe.config
-C:\Users\Wesley\source\repos\RatKing\RatKing\bin\Debug\RatKing.exe
-C:\Users\Wesley\source\repos\RatKing\RatKing\bin\Debug\RatKing.pdb
-C:\Users\Wesley\source\repos\RatKing\RatKing\obj\Debug\RatKing.csproj.AssemblyReference.cache
-C:\Users\Wesley\source\repos\RatKing\RatKing\obj\Debug\RatKing.csproj.SuggestedBindingRedirects.cache
-C:\Users\Wesley\source\repos\RatKing\RatKing\obj\Debug\RatKing.csproj.CoreCompileInputs.cache
-C:\Users\Wesley\source\repos\RatKing\RatKing\obj\Debug\RatKing.exe
-C:\Users\Wesley\source\repos\RatKing\RatKing\obj\Debug\RatKing.pdb
